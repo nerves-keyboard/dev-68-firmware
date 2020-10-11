@@ -25,3 +25,7 @@ echo "+usb1" > "${BOND_DIR}/slaves"
 echo "usb1" > "${BOND_DIR}/primary"
 
 ip link set bond0 up
+
+# load pin configuration
+
+config-pin -f /etc/config-pin/bbbw-matrix.conf

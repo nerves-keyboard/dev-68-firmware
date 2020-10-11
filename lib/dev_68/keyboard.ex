@@ -22,8 +22,11 @@ defmodule Dev68.Keyboard do
     [:k016, :k015, :k014, :k013, :k012, :k011, :k010, :k009]
   ]
 
-  @row_pins [26, 20, 89, 87, 86, 45, 27, 65, 23, 44]
-  @col_pins [46, 64, 47, 52, 60, 57, 58, 59]
+  # See `rootfs_overlay/etc/config-pin/bbbw-matrix.conf` for where these numbers
+  # came from. If you're using PocketBeagle, change these numbers to match
+  # `rootfs_overlay/etc/config-pin/pocket.conf` instead.
+  @row_pins [70, 71, 72, 73, 74, 75, 76, 77, 86, 87]
+  @col_pins [110, 111, 112, 113, 7, 115, 20, 117]
 
   @debounce_window 10
 
