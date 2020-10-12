@@ -45,6 +45,7 @@ defmodule Dev68.MixProject do
       {:toolshed, "~> 0.2.13"},
       {:circuits_gpio, "~> 0.4"},
       {:afk, "~> 0.3"},
+      {:is31fl3733, "~> 0.1.0", github: "ElixirSeattle/IS31FL3733", ref: "initial-pass"},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.11.3", targets: @all_targets},
