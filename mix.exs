@@ -53,10 +53,10 @@ defmodule Dev68.MixProject do
 
       # Dependencies for specific targets
       {:nerves_system_dev_68_bbb, "2.7.2+dev-68.1",
-       path: "../nerves_system_dev_68_bbb",
+       github: "ElixirSeattle/nerves_system_dev_68_bbb",
+       ref: "v2.7.2+dev-68.1",
        runtime: false,
-       targets: :dev_68_bbb,
-       nerves: [compile: true]}
+       targets: :dev_68_bbb}
     ]
   end
 
