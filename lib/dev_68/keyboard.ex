@@ -193,6 +193,7 @@ defmodule Dev68.Keyboard do
     |> Enum.each(fn
       {:pressed, key} ->
         AFK.State.press_key(state.keyboard_state, key)
+        rgb_matrix_interact(key)
 
       {:released, key} ->
         AFK.State.release_key(state.keyboard_state, key)
@@ -221,6 +222,13 @@ defmodule Dev68.Keyboard do
     Process.send_after(self(), :scan, 2)
 
     {:noreply, %{state | held_keys: keys, buffer: buffer}}
+  end
+
+  defp rgb_matrix_interact(key) do
+    case KeyboardLayout.led_for_key(Dev68.Layout.layout(), key) do
+      nil -> :noop
+      led -> RGBMatrix.Engine.interact(led)
+    end
   end
 
   defp scan(matrix_config) do

@@ -34,6 +34,8 @@ defmodule Dev68.Application do
       # Children for all targets except host
       # Starts a worker by calling: Dev68.Worker.start_link(arg)
       # {Dev68.Worker, arg},
+      RGBMatrix.Engine,
+      Dev68.LEDs,
       Dev68.Keyboard
     ]
   end

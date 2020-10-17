@@ -45,7 +45,9 @@ defmodule Dev68.MixProject do
       {:toolshed, "~> 0.2.13"},
       {:circuits_gpio, "~> 0.4"},
       {:afk, "~> 0.3"},
-      {:is31fl3733, "~> 0.1.0", github: "ElixirSeattle/IS31FL3733", ref: "initial-pass"},
+      {:is31fl3733, "~> 0.1.0"},
+      {:keyboard_layout, github: "nerves-keyboard/keyboard_layout", ref: "main", override: true},
+      {:rgb_matrix, github: "nerves-keyboard/rgb_matrix", ref: "main"},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.11.3", targets: @all_targets},
@@ -53,7 +55,7 @@ defmodule Dev68.MixProject do
 
       # Dependencies for specific targets
       {:nerves_system_dev_68_bbb, "2.8.0+dev-68.2",
-       github: "ElixirSeattle/nerves_system_dev_68_bbb",
+       github: "nerves-keyboard/nerves_system_dev_68_bbb",
        ref: "v2.8.0+dev-68.2",
        runtime: false,
        targets: :dev_68_bbb}
