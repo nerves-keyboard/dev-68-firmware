@@ -46,8 +46,8 @@ defmodule Dev68.MixProject do
       {:circuits_gpio, "~> 0.4"},
       {:afk, "~> 0.3"},
       {:is31fl3733, "~> 0.1.0"},
-      {:keyboard_layout, github: "nerves-keyboard/keyboard_layout", ref: "main", override: true},
-      {:rgb_matrix, github: "nerves-keyboard/rgb_matrix", ref: "main"},
+      {:keyboard_layout, "~> 0.1"},
+      {:rgb_matrix, "~> 0.1"},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.11.3", targets: @all_targets},
