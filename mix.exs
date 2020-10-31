@@ -52,9 +52,9 @@ defmodule Dev68.MixProject do
       {:nerves_pack, "~> 0.4.0", targets: @all_targets},
 
       # Dependencies for specific targets
-      {:nerves_system_dev_68_bbb, "2.7.2+dev-68.1",
+      {:nerves_system_dev_68_bbb, "2.8.0+dev-68.2",
        github: "ElixirSeattle/nerves_system_dev_68_bbb",
-       ref: "v2.7.2+dev-68.1",
+       ref: "v2.8.0+dev-68.2",
        runtime: false,
        targets: :dev_68_bbb}
     ]
